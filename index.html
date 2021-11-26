@@ -9,7 +9,6 @@
         <meta name="keywords">
 
         <link rel="icon" href="assets/img/favicon/favicon.ico">
-        <link rel="stylesheet" href="assets/img/favicon/apple-touch-icon.png">
 
         <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i" rel="stylesheet">
 
@@ -17,6 +16,12 @@
         <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
 
         <link rel="stylesheet" href="assets/css/tbj.css">
+        <style>
+            .filter-green{
+                /* filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%); */
+                filter: invert(100%) sepia(100%) saturate(38%) hue-rotate(321deg) brightness(110%) contrast(110%);
+            }
+        </style>
     </head>
 
     <body>
@@ -45,15 +50,14 @@
 
                 <div class="subscribe">
                     <h4>Subscribe now to get the latest updates!</h4>
-                    <form action="forms/notify.php" method="post" role="form" class="php-email-form">
-                        <div class="subscribe-form">
-                            <input type="email" name="email"><input type="submit" value="Subscribe">
-                        </div>
-                        <div class="mt-2">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your notification request was sent. Thank you!</div>
-                        </div>
+                    <form id="contactform" action="https://formsubmit.io/send/backendbackbonner@outlook.com" method="POST" class="subscribe-form">
+                        <input name="_redirect" type="hidden" id="name" value="https://backend-backboners.github.io/repat/index.html">
+                            <input type="text" name="name" id="name" value="New Subcriber" hidden>
+                            <input type="text" name="subject" id="subject" value="New Subscriber" hidden>
+                            <textarea name="comment" id="comment" rows="3" hidden></textarea>
+                            <input type="email" name="email" id="email">
+                            <input name="_formsubmit_id" type="text" style="display:none">
+                            <input type="submit" value="Submit">
                     </form>
                 </div>
 
@@ -71,7 +75,7 @@
                 <div class="container">
                     <div class="row content">
                         <div class="col-lg-6">
-                            <h2>REPAT - TO THE REAL A</h2>
+                            <h2>REP<img src="assets/img/africa.svg" alt="Africa" width="100px" height="100px" class="filter-green"/> T - TO THE REAL A</h2>
                             <h3>For us by us!</h3>
                         </div>
                         <div class="col-lg-6 pt-4 pt-lg-0">
@@ -127,7 +131,7 @@
           
                     <div class="row justify-content-center">
                         <div class="col-lg-10">
-                            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                            <form action="" method="post" role="form" class="php-email-form">
                                 <div class="row">
                                     <div class="col-md-6 form-group">
                                         <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -157,12 +161,6 @@
                                         Accept our <a href="terms.html">terms of service</a> and <a href="privacy.html">privacy policy</a>
                                     </label>
                                 </div> -->
-
-                                <div class="my-3">
-                                    <div class="loading">Loading</div>
-                                    <div class="error-message"></div>
-                                    <div class="sent-message">Your message has been sent. Thank you!</div>
-                                </div>
                                 
                                 <div class="text-center"><button type="submit">Send Message</button></div>
                             </form>
